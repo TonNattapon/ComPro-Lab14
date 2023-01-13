@@ -24,9 +24,9 @@ int main()
 
 void showImage(const bool d[N][M]){
     cout << "------------------------------------------------------------------------\n";
-    for (int j = 0 ; j <30 ; j++){
+    for (int j = 0 ; j <N ; j++){
         cout << "|";
-        for (int i = 0 ; i < 70 ; i ++ ){
+        for (int i = 0 ; i < M ; i ++ ){
             if(d[j][i]==1) {
             cout << '*';
             continue;
@@ -43,9 +43,9 @@ void showImage(const bool d[N][M]){
     
 }
 void updateImage(bool d[N][M],int S,int X,int Y){
-    for (int j = 0; j < 30; j++)
+    for (int j = 0; j < N; j++)
     {
-        for (int i = 0; i < 70; i++)
+        for (int i = 0; i < M; i++)
         {
            if (sqrt(pow(j-X,2) + pow(i-Y,2))<= S-1 ){
             d[j][i] = 1 ;
